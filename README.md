@@ -1,4 +1,4 @@
-synestethic
+synesthetic
 ===========
 
 Work in progress...
