@@ -5,7 +5,8 @@
 //// me quede probando con el intercambio de array string y ascii
 s.boot;
 Help.gui;
-(//haz que cambie el numero ~res random
+// Tarea para probar el comportamiento del poema
+(
 Task({|i|
 	var arr,z;
 	i=0;
@@ -32,7 +33,7 @@ Task({|i|
 	});
 }).play;
 );
-//
+// pruebas:
 (
 		x=["Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
 			sin vergüenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detrás de la puerta,
@@ -46,8 +47,8 @@ Task({|i|
 			alumbrarse...".clumps([1,1]).asCompileString];
 );
 x.ascii;
-x.flatten(1);
-x[0].postcln;
+x.flatten(8);
+x[1].postcln;
 //
 ////
 a=["ka","rl","it","aa"].join.ascii.join;
@@ -61,9 +62,11 @@ b.flatten(1);
 //
 Help.gui;
 /*
+//Serpentario: key words
 [ secreta soledad al interior de la serpiente, vé ligero como aire al cosmos, invisible danza de alas rotas,
 ancestrales paraísos sin principio ni final, recuerdo-maestro, realidad-dualidad, eco de ángel, fuego, dragón,
 serpiente, poesía en la oscuridad para alumbrarse... ]
+//Poema:
 Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
 sin vergüenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detrás de la puerta,
 te quedas ligero como una personalidad de aire y develas al cosmos los secretos de un existir invisible que llevas
