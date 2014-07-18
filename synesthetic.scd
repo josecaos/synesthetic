@@ -31,22 +31,23 @@ que refleja el espejo de la Dualidad. La voz de este abismo tiene un eco de ange
 pero con el poder del fuego en el consejo de su boca que te pide entres en la serpiente para cambiar de piel y
 aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscuridad solo existe para
 alumbrarse...".clumps([1,1]);
+	vel=1;//valores de 0.1 a 4
 	a = poema.ascii.flatten(1);
 	inf.do({
-		vel=1;//0.1 to 4 values
+
 		if(i==1029,{"Starting Again: \n".postcln;i=0});
 		n=a[i];
 		poema[i].post;
 		t=tiempo.next;//igualamos
-		/*
 		if(a[i].value<36,{n=a[i].value+12},{nil});//normaliza lo valores mas bajos de 28.midicps
 		if(a[i].value>84,{n=a[i].value-24},{nil});//normaliza los valores mayores de 84.midicps
+		/*
 		if(t==0.25,{release=0.25},{
 				if(t==0.5,{release=0.5},{
 						release=1})
 				});//estos condicionales igualan la duracion del tiempo con la del release del SynthDef
 		*/
-		release=t;
+		release=t;//esto hace lo mismo que lo comentado anteriormente
 		//release.postln;
 		//t.postcln;
 		Synth(\sonidos,[\gate,1,\nota,n,\chord,ac.next,\rel,release]);
