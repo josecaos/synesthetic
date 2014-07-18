@@ -33,7 +33,7 @@ aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscurida
 alumbrarse...".clumps([1,1]);
 	a = poema.ascii.flatten(1);
 	inf.do({
-		if(i==1029,{"Starting Again: \n".postcln;i=0});
+		if(i==1028,{"Starting Again: \n".postcln;i=0});
 		n=a[i];
 		poema[i].post;
 		t=tiempo.next;//igualamos
