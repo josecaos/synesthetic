@@ -3,13 +3,12 @@
 //Help.gui;
 //
 (
-~w=Window("Make songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(255);
+~w=Window("Make songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
 ~t=TextField(~w,Rect(20,100,780,200)).align_(\topLeft);
-~t.string=~poema.clumps([1,1]);
-~t.action={|field| field.value = ~poema.clumps([1,1]);
+~t.string=~poema;
+~t.action={|field| field.value.absoluteBounds=Rect(0,0,0,100)};
 //
 ~w.onClose={Tdef(\palabras).stop;s.quit};
-}
 );
 
 //.resizeToFit

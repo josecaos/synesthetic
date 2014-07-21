@@ -13,7 +13,7 @@ Tdef(\palabras,{|i|
 	ac=Pxrand(['M','m','M7','m7','Mmaj7','mmaj7','M9','M9m','m9','m9m'],inf).asStream;
 	tiempo=Pwrand([0.25,0.5,1]/vel,[0.63,0.23,0.13],inf).asStream;
     ~inicio.post;
-	a = ~poema.ascii.flatten(1);
+	a = ~poema.clumps([1,1]).ascii.flatten(1);
 	inf.do({
 		if(i==1028,{"Starting Again: \n".postcln;i=0});
 		n=a[i];

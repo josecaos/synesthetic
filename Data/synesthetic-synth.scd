@@ -11,7 +11,7 @@
 SynthDef(\synth1,{|nota=60,rel=0.25,acorde,pan=0,gate=1,out=0|
 	var chord = 'M9';
 	acorde = chord;
-			//this class belongs to CaosPercLib v1.0:
+			//this class 'CaosGuitChords' belongs to CaosPercLib v1.0:
 			Out.ar(out,CaosGuitChords.ar(acorde,0.05,rel,nota,2200,0.5,pan,gate,1));
 	}).add;
 );

@@ -9,3 +9,4 @@ s.waitForBoot{
 	(~local +/+ "Data/synesthetic-load.scd").load};
 );
 //end of file
+// Help.gui
