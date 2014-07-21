@@ -12,14 +12,14 @@ Tdef(\palabras,{|i|
 	i=0;
 	ac=Pxrand(['M','m','M7','m7','Mmaj7','mmaj7','M9','M9m','m9','m9m'],inf).asStream;
 	tiempo=Pwrand([0.25,0.5,1]/vel,[0.63,0.23,0.13],inf).asStream;
-    ~inicio.postln;
+    ~inicio.post;
 	a = ~poema.ascii.flatten(1);
 	inf.do({
 		if(i==1028,{"Starting Again: \n".postcln;i=0});
 		n=a[i];
 		~poema[i].post;
 		t=tiempo.next;//igualamos
-		if(a[i].value<36,{n=a[i].value+12},{nil});//normaliza lo valores mas bajos de 28.midicps
+		if(a[i].value<36,{n=a[i].value+12},{nil});//normaliza los valores mas bajos de 28.midicps
 		if(a[i].value>84,{n=a[i].value-48},{nil});//normaliza los valores mayores de 84.midicps
 		/*
 		if(t==0.25,{release=0.25},{
@@ -30,7 +30,7 @@ Tdef(\palabras,{|i|
 		release=t/vel;//esto hace lo mismo que lo comentado anteriormente
 		//release.postln;
 		//t.postcln;
-				Synth(\sonidos,[\gate,1,\nota,n,\chord,ac.next,\rel,release]);
+		Synth(\synth1,[\gate,1,\nota,n,\chord,ac.next,\rel,release]);
 		i=i+1;
 		cont=i%~poema.size;
 		t.wait;
@@ -38,3 +38,4 @@ Tdef(\palabras,{|i|
 });
 );
 Tdef(\palabras).play;
+//
