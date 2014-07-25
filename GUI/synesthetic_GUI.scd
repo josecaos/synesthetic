@@ -1,16 +1,24 @@
 //written by @joseCao5
-//synesthetic GUI
-//Help.gui;
+//synesthetic synth, GUI
 //
 (
 ~w=Window("Make songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
-~t=TextField(~w,Rect(20,100,780,200)).align_(\topLeft);
+~b=Button(~w,Rect(10,10,40,338));
+~b.states_([["PLAY",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
+	            ["STOP",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+~b.action={|val| if(val.value==1,{Tdef(\palabras).play},{Tdef(\palabras).stop})};
+//boton graficos
+~bg=Button(~w,Rect(740,317,75,30));
+~bg.states_([["Graphs On",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
+	            ["Graphs Off",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+~bg.action={|val| if(val.value==1,{~g.front},{~g.close})};
+~t=TextField(~w,Rect(55,148,680,200)).align_(\topLeft);
 ~t.string=~poema;
 ~t.action={|field| field.value.absoluteBounds=Rect(0,0,0,100)};
 //
 ~w.onClose={Tdef(\palabras).stop;s.quit};
 );
-
+//
 //.resizeToFit
 //
 /*
