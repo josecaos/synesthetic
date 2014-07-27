@@ -11,7 +11,8 @@
 ~bg=Button(~w,Rect(740,317,75,30));
 ~bg.states_([["Graphs On",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["Graphs Off",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
-~bg.action={|val| if(val.value==1,{~g.front},{~g.close})};
+~bg.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-graph_GUI.scd").load;~g.front},{~g.close})};
+//texto de entrada
 ~t=TextField(~w,Rect(55,148,680,200)).align_(\topLeft);
 ~t.string=~poema;
 ~t.action={|field| field.value.absoluteBounds=Rect(0,0,0,100)};
