@@ -1,4 +1,4 @@
-//written by joseCao5
+//written by @joseCao5
 //
 //a graphic pad for synesthetic synth
 //Pen window

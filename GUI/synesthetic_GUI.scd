@@ -2,7 +2,7 @@
 //synesthetic synth, GUI
 //
 (
-~w=Window("Make songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
+~w=Window("Make a song with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
 ~b=Button(~w,Rect(10,10,40,338));
 ~b.states_([["PLAY",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["STOP",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
@@ -12,10 +12,14 @@
 ~bg.states_([["Graphs On",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["Graphs Off",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bg.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-graph_GUI.scd").load;~g.front},{~g.close})};
-//texto de entrada
-~t=TextField(~w,Rect(55,148,680,200)).align_(\topLeft);
-~t.string=~poema;
-~t.action={|field| field.value.absoluteBounds=Rect(0,0,0,100)};
+//boton entrada texto
+~bt=Button(~w,Rect(55,117,110,30));
+~bt.states_([["Input Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
+	            ["Close Input Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+~bt.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;~t.front},{~t.close})};
+//texto de salida
+~wt=QWindow.new(~w,Rect(55,148,680,200));
+~wt.drawFunc = {~poema.drawInRect(Rect(10, 10, 700, 700),Font("Sans", 11),Color.red(0.3, 0.95))};
 //
 ~w.onClose={Tdef(\palabras).stop;s.quit};
 );
