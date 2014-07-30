@@ -33,12 +33,11 @@ Tdef(\palabras,{|i|
 		//release.postln;
 		//t.postcln;
 		Synth(\synth1,[\gate,1,\nota,n,\chord,ac.next,\rel,release,\amp,acento.next]);
-		{~g.refresh}.defer(0.05);
 		i=i+1;
 		cont=i%~poema.size;
+		{~g.refresh}.defer(0.05);
 		t.wait;
 	});
 });
 );
-//Tdef(\palabras).play;
 //
