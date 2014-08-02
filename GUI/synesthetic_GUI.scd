@@ -2,7 +2,7 @@
 //synesthetic synth, GUI
 //
 (
-~w=Window("Make a song with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
+~w=Window.("Make a song with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
 ~b=Button(~w,Rect(10,10,40,338));
 ~b.states_([["PLAY",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["STOP",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
@@ -17,23 +17,14 @@
 ~bt.states_([["Input Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["Close Input Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bt.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;~t.front},{~t.close})};
-//texto de salida
-~w.drawFunc = {~it.value.drawCenteredIn(Rect(150,180,500,700),Font("Sans", 11),Color.red(0.3, 0.95))};
 // cerrar ventana
 ~w.onClose={Tdef(\palabras).stop;s.quit};
 );
 //
 //.resizeToFit
-//
+// Help.gui
 /*
 //ej:
-(
-w = Window.new.front;
-a = TextField(w, Rect(10, 10, 150, 20));
-a.string = "hi there";
-a.action = {arg field; field.value.postln; };
-)
-
 // does not do the action
 a.value = "yo";
 a.string = "oy";

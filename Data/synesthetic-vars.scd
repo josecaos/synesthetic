@@ -10,15 +10,15 @@
 //barra de inicio
 ~inicio="/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\n";
 //Default Poem
-~poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas\n
-sin verguenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detras de la puerta,\n
-te quedas ligero como una personalidad de aire y develas al cosmos los secretos de un existir invisible que llevas\n
-en tus silencios, la serpiente danza con su traje de alas rotas y en cada movimiento el perfume de ancestrales\n
-paraisos aun presentes se puede oler, es un aroma sin principio ni final que se esparce desde siempre en todas\n
-las dimensiones. El recuerdo de este olor tambien es tu maestro, escucha atento sin dejar de mirar la realidad\n
-que refleja el espejo de la Dualidad. La voz de este abismo tiene un eco de angel caido, de un dragon sin alas\n
-pero con el poder del fuego en el consejo de su boca que te pide entres en la serpiente para cambiar de piel y\n
-aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscuridad solo existe para\n
+~poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
+sin verguenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detras de la puerta,
+te quedas ligero como una personalidad de aire y develas al cosmos los secretos de un existir invisible que llevas
+en tus silencios, la serpiente danza con su traje de alas rotas y en cada movimiento el perfume de ancestrales
+paraisos aun presentes se puede oler, es un aroma sin principio ni final que se esparce desde siempre en todas
+las dimensiones. El recuerdo de este olor tambien es tu maestro, escucha atento sin dejar de mirar la realidad
+que refleja el espejo de la Dualidad. La voz de este abismo tiene un eco de angel caido, de un dragon sin alas
+pero con el poder del fuego en el consejo de su boca que te pide entres en la serpiente para cambiar de piel y
+aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscuridad solo existe para
 alumbrarse...";
 
 

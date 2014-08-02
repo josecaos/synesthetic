@@ -17,7 +17,7 @@ Tdef(\palabras,{|i|
 	a = ~poema.clumps([1,1]).ascii.flatten(1);
 	inf.do({
 		~i=i;
-		if(i>=~it.value.size,{"Starting Again: \n".postcln;i=-4});
+		if(i>=~it.value.size,{"Starting Again: \n".postcln;i=0});
 		n=a[i];
 		~poema[i].post;
 		t=tiempo.next;//unificar ~poema[i].post;el resultado del tiempo
@@ -36,8 +36,11 @@ Tdef(\palabras,{|i|
 		Synth(\synth1,[\gate,1,\nota,n,\chord,ac.next,\rel,release,\amp,acento.next]);
 		i=i+1;
 		cont=i%~poema.size;
-		{~g.refresh;
-		 ~w.refresh}.defer(0.05);
+		{
+		//texto de salida
+		~w.drawFunc = {"Sans".drawCenteredIn(Rect(150,180,500,700),Font("Sans", 10),Color.black(0.5, 0.75))};
+		~g.refresh;
+		~w.refresh}.defer(0.05);
 		t.wait;
 	});
 });
