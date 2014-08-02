@@ -18,9 +18,8 @@
 	            ["Close Input Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bt.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;~t.front},{~t.close})};
 //texto de salida
-~wt=Window.new(~w,Rect(55,148,680,200));
-~wt.drawFunc = {~poema.drawInRect(Rect(10,10,700,700),Font("Sans", 11),Color.red(0.3, 0.95))};
-//
+~w.drawFunc = {~it.value.drawCenteredIn(Rect(150,180,500,700),Font("Sans", 11),Color.red(0.3, 0.95))};
+// cerrar ventana
 ~w.onClose={Tdef(\palabras).stop;s.quit};
 );
 //

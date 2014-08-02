@@ -17,4 +17,6 @@
 (~local +/+ "Data/synesthetic-synth.scd").load;
 (~local +/+ "Data/synesthetic-seq.scd").load;
 (~local +/+ "GUI/synesthetic-graph_GUI.scd").load;
+(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;
 (~local +/+ "GUI/synesthetic_GUI.scd").load;
+//

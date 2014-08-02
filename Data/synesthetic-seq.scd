@@ -16,10 +16,11 @@ Tdef(\palabras,{|i|
     ~inicio.post;
 	a = ~poema.clumps([1,1]).ascii.flatten(1);
 	inf.do({
-		if(i==1028,{"Starting Again: \n".postcln;i=0});
+		~i=i;
+		if(i>=~it.value.size,{"Starting Again: \n".postcln;i=-4});
 		n=a[i];
 		~poema[i].post;
-		t=tiempo.next;//igualamos
+		t=tiempo.next;//unificar ~poema[i].post;el resultado del tiempo
 		//minimizamos la tesitura
 		if(a[i].value<36,{n=a[i].value+12},{nil});//normaliza los valores mas bajos de 28.midicps
 		if(a[i].value>84,{n=a[i].value-48},{nil});//normaliza los valores mayores de 84.midicps
@@ -35,9 +36,10 @@ Tdef(\palabras,{|i|
 		Synth(\synth1,[\gate,1,\nota,n,\chord,ac.next,\rel,release,\amp,acento.next]);
 		i=i+1;
 		cont=i%~poema.size;
-		{~g.refresh}.defer(0.05);
+		{~g.refresh;
+		 ~w.refresh}.defer(0.05);
 		t.wait;
 	});
 });
 );
-//
+// Help.gui;
