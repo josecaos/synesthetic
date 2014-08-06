@@ -2,7 +2,7 @@
 //synesthetic synth, GUI
 //
 (
-~w=Window.("Make a song with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front.background=Color(50);
+~w=Window("Make a song with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,412,180),true).front;
 ~b=Button(~w,Rect(10,10,40,338));
 ~b.states_([["PLAY",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["STOP",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
@@ -23,16 +23,3 @@
 //
 //.resizeToFit
 // Help.gui
-/*
-//ej:
-// does not do the action
-a.value = "yo";
-a.string = "oy";
-
-a.valueAction_("this is not a pipe"); //does the action, if the value has changed
-a.doAction; //evaluates the action with the content of the text field as an argument
-
-a.background_(Color.grey);
-a.stringColor_(Color.white);
-a.align_(\center);
-*/

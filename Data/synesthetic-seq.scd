@@ -38,7 +38,7 @@ Tdef(\palabras,{|i|
 		cont=i%~poema.size;
 		{
 		//texto de salida
-		~w.drawFunc = {"Sans".drawCenteredIn(Rect(150,180,500,700),Font("Sans", 10),Color.black(0.5, 0.75))};
+		~w.drawFunc = {"Sans".drawCenteredIn(Rect(150,180,500,700),Font("Sans", 10),Color.black(0.5, 0.75))}.defer;
 		~g.refresh;
 		~w.refresh}.defer(0.05);
 		t.wait;
