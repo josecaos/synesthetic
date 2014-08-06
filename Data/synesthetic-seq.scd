@@ -17,13 +17,13 @@ Tdef(\palabras,{|i|
 	a = ~poema.clumps([1,1]).ascii.flatten(1);
 	inf.do({
 		~i=i;
-		if(i>=~it.value.size,{"Starting Again: \n".postcln;i=0});
+		if(i>=~poema,{"Starting Again: \n".postcln;i=0});
 		n=a[i];
 		~poema[i].post;
 		t=tiempo.next;//unificar ~poema[i].post;el resultado del tiempo
 		//minimizamos la tesitura
-		if(a[i].value<36,{n=a[i].value+12},{nil});//normaliza los valores mas bajos de 28.midicps
-		if(a[i].value>84,{n=a[i].value-48},{nil});//normaliza los valores mayores de 84.midicps
+		if(a[i].value<36,{n=a[i].value+12});//normaliza los valores mas bajos de 28.midicps
+		if(a[i].value>84,{n=a[i].value-48});//normaliza los valores mayores de 84.midicps
 		/*
 		if(t==0.25,{release=0.25},{
 				if(t==0.5,{release=0.5},{
@@ -38,7 +38,6 @@ Tdef(\palabras,{|i|
 		cont=i%~poema.size;
 		{
 		//texto de salida
-		~w.drawFunc = {"Sans".drawCenteredIn(Rect(150,180,500,700),Font("Sans", 10),Color.black(0.5, 0.75))}.defer;
 		~g.refresh;
 		~w.refresh}.defer(0.05);
 		t.wait;

@@ -17,6 +17,7 @@
 ~bt.states_([["Input Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["Close Input Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bt.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;~t.front},{~t.close})};
+~w.drawFunc = {"Sans".drawCenteredIn(Rect(150,180,200,200),Font("Sans", 10),Color.black(0.5, 0.75))};
 // cerrar ventana
 ~w.onClose={Tdef(\palabras).stop;s.quit};
 );
