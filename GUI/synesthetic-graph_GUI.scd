@@ -25,7 +25,7 @@
 	Pen.lineTo(rrand(-10,300)@rrand(-10,400));
 	Pen.moveTo(rrand(10,-400)@rrand(-10,400));
 	Pen.lineTo(rrand(-10,-400)@rrand(10,-400));
-    Pen.strokeColor = Color.randr;
+    Pen.strokeColor = Color.rand;
 	Pen.width = rrand(1,15);
 	//Pen.scale(rrand(0.1,1), rrand(1,4));
     Pen.lineTo(rrand(10,400)@rrand(10,400));

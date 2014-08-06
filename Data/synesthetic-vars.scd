@@ -20,9 +20,8 @@ que refleja el espejo de la Dualidad. La voz de este abismo tiene un eco de ange
 pero con el poder del fuego en el consejo de su boca que te pide entres en la serpiente para cambiar de piel y
 aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscuridad solo existe para
 alumbrarse...";
-
-
-
+//indice del poema
+~letra=~poema[~i];
 /*
 //Based in a poem remixed by Karla Guillen
 //Serpentario: key words

@@ -8,16 +8,16 @@
 //
 (
 Tdef(\palabras,{|i|
-	var a,ac,acento,cont,n,release,tiempo,t,vel=0.5;
+	var a,ac,acento,cont,n,release,tiempo,t,vel=0.85;
 	i=0;
 	ac=Pxrand(['M','m','M7','m7','Mmaj7','mmaj7','M9','M9m','m9','m9m'],inf).asStream;
 	acento=Pseq([1,0.7,0.9,0.6],inf).asStream;
 	tiempo=Pwrand([0.25,0.5,1]/vel,[0.63,0.23,0.13],inf).asStream;
     ~inicio.post;
 	a = ~poema.clumps([1,1]).ascii.flatten(1);
+	if(~i>=~poema.size,{"\n Starting Again: \n".postln;i=0});
 	inf.do({
 		~i=i;
-		if(i>=~poema,{"Starting Again: \n".postcln;i=0});
 		n=a[i];
 		~poema[i].post;
 		t=tiempo.next;//unificar ~poema[i].post;el resultado del tiempo
@@ -42,6 +42,6 @@ Tdef(\palabras,{|i|
 		~w.refresh}.defer(0.05);
 		t.wait;
 	});
-});
+}).quant_(1);
 );
 // Help.gui;
