@@ -15,12 +15,13 @@ Tdef(\palabras,{|i|
 	tiempo=Pwrand([0.25,0.5,1]/vel,[0.63,0.23,0.13],inf).asStream;
     ~inicio.post;
 	a = ~poema.clumps([1,1]).ascii.flatten(1);
-	if(~i>=~poema.size,{"\n Starting Again: \n".postln;i=0});
 	inf.do({
 		~i=i;
+		if(~i>=~poema.size,{"\n Starting Again: \n".postln;i=0},{nil});//regula el reinicio segun el tamano del iterante
+		if(~poema.size<=~i,{"\n Starting Again: \n".postln;i=0},{nil});//regula el reinicio segun el tamano del poema
 		n=a[i];
 		~poema[i].post;
-		t=tiempo.next;//unificar ~poema[i].post;el resultado del tiempo
+		t=tiempo.next;
 		//minimizamos la tesitura
 		if(a[i].value<36,{n=a[i].value+12});//normaliza los valores mas bajos de 28.midicps
 		if(a[i].value>84,{n=a[i].value-48});//normaliza los valores mayores de 84.midicps

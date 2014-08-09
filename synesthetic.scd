@@ -4,7 +4,7 @@
 ////////////////////////////////////
 (
 s.waitForBoot{
-	 ~local="/home/josecao5/Documents/Repos/synesthetic/";/* <--- Change for your local URL to synesthetic folder */
+	 ~local="/home/josecao5/Documents/Repos/synesthetic/";/* <--- Change for your local URL to synesthetic folder location*/
 	////////////////////////////////////////////////////////
 	(~local +/+ "Data/synesthetic-load.scd").load};
     s.scope(2,0);
