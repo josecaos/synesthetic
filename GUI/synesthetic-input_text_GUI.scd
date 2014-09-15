@@ -2,7 +2,7 @@
 //
 //Window to input text and convert it to ascii
 (
-~t=Window("Synesthetic Synth Input Text to Notes, written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,350,10),false,false);
+~t=Window("Click 'Enter' to input text as notes, written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,350,10),false,true);
 ~t.view.background_(Color.fromHexString("#f1f1f1"));
 // texto
 ~it=TextField(~t,Rect(0,0,700,20)).align_(\topLeft);

@@ -8,8 +8,8 @@
 //iteracion global
 ~i=0;
 //barra de inicio
-~inicio="/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\n";
-//Default Poem
+~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n".postln;
+//Poema por default, esta variable cambia de acuerdo al texto introducido en el GUI
 ~poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
 sin verguenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detras de la puerta,
 te quedas ligero como una personalidad de aire y develas al cosmos los secretos de un existir invisible que llevas
