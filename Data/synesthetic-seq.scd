@@ -8,18 +8,17 @@
 //
 (
 Tdef(\palabras,{|i|
-	var a,ac,acento,cont,n,release,tiempo,t,vel=0.85;
+	var a,ac,acento,cont,n,release,tiempo,t,vel=0.5;
 	i=0;
 	ac=Pxrand(['M','m','M7','m7','Mmaj7','mmaj7','M9','M9m','m9','m9m'],inf).asStream;
 	acento=Pseq([1,0.7,0.9,0.6],inf).asStream;
-	tiempo=Pwrand([0.25,0.5,1]/vel,[0.63,0.23,0.13],inf).asStream;
+	tiempo=Pwrand([0.25,0.5]/vel,[0.66,0.33],inf).asStream;
     ~inicio.post;
 	a = ~poema.clumps([1,1]).ascii.flatten(1);//array con valor ascii
 	inf.do({
 		~i=i;
 		if(~i<a.size,{if(~poema.size<=~i,{~inicio.postln;i=0},{nil})},{~inicio.postln;i=0});//regula el reinicio segun el iterante o segun el tamano del poema
-		n=a[i];
-		//i.post+":".post;
+		if(a[i].value==32,{vel=2},{vel=0.5 /*aqui ira el  valor de un input*/ });//asigna un valor constante los espacios del texto
 		~poema[i].post;
 		{
 		//texto de salida
