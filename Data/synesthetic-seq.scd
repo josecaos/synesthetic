@@ -17,11 +17,9 @@ Tdef(\palabras,{|i|
 	a = ~poema.clumps([1,1]).ascii.flatten(1);//array con valor ascii
 	inf.do({
 		~i=i;
-		if(~i<=a.size,{
-			if(a.size<=~i,{~inicio.postln;i=0;},{nil})
-		   },{~inicio.postln;i=0});//regula el reinicio segun el iterante o segun el tamano del poema
+		if(~i<a.size,{if(~poema.size<=~i,{~inicio.postln;i=0},{nil})},{~inicio.postln;i=0});//regula el reinicio segun el iterante o segun el tamano del poema
 		n=a[i];
-		i.post+":".post;
+		//i.post+":".post;
 		~poema[i].post;
 		{
 		//texto de salida
@@ -43,4 +41,4 @@ Tdef(\palabras,{|i|
 }).quant_(1);
 );
 // Help.gui;
-" ".ascii.postcln//numero ascii del espacio
+// " ".ascii.postcln //numero ascii del espacio

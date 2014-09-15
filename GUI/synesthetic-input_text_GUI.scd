@@ -8,7 +8,7 @@
 ~it=TextField(~t,Rect(0,0,700,20)).align_(\topLeft);
 ~it.background_(Color.green(1,0.2));
 ~it.string=~poema;
-~it.action={|field| ~poema=field.value};
+~it.action={|field| (~local +/+ "Data/synesthetic-seq.scd").load; ~poema=field.value};
 )
 //~t.close;
 //~t.refresh;
