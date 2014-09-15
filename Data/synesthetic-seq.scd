@@ -6,6 +6,7 @@
 //
 ////////////////////////////////
 //
+~poema.size.postln
 (
 Tdef(\palabras,{|i|
 	var a,ac,acento,cont,n,release,tiempo,t,vel=0.85;
@@ -17,7 +18,7 @@ Tdef(\palabras,{|i|
 	a = ~poema.clumps([1,1]).ascii.flatten(1);
 	inf.do({
 		~i=i;
-		if(~i>=~poema.size,{"\n Starting Again: \n".postln;i=0},{nil});//regula el reinicio segun el tamano del iterante
+		if(~i>=~poema.size,{ [~inicio,"\n"].postln;i=0},{nil});//regula el reinicio segun el tamano del iterante
 		if(~poema.size<=~i,{"\n Starting Again: \n".postln;i=0},{nil});//regula el reinicio segun el tamano del poema
 		n=a[i];
 		~poema[i].post;
@@ -25,22 +26,17 @@ Tdef(\palabras,{|i|
 		//minimizamos la tesitura
 		if(a[i].value<36,{n=a[i].value+12});//normaliza los valores mas bajos de 28.midicps
 		if(a[i].value>84,{n=a[i].value-48});//normaliza los valores mayores de 84.midicps
-		/*
-		if(t==0.25,{release=0.25},{
-				if(t==0.5,{release=0.5},{
-						release=1})
-				});//estos condicionales igualan la duracion del tiempo con la del release del SynthDef
-		*/
 		release=t/vel;//esto hace lo mismo que lo comentado anteriormente
 		//release.postln;
 		//t.postcln;
 		Synth(\synth1,[\gate,1,\nota,n,\chord,ac.next,\rel,release,\amp,acento.next]);
-		i=i+1;
 		cont=i%~poema.size;
 		{
 		//texto de salida
 		~g.refresh;
-		~w.refresh}.defer(0.05);
+		~w.refresh
+		}.defer(0.05);
+		i=i+1;
 		t.wait;
 	});
 }).quant_(1);
