@@ -18,20 +18,17 @@ Tdef(\palabras,{|i|
 	inf.do({
 		~i=i;
 		if(~i<a.size,{if(~poema.size<=~i,{~inicio.postln;i=0},{nil})},{~inicio.postln;i=0});//regula el reinicio segun el iterante o segun el tamano del poema
-		if(a[i].value==32,{vel=2},{vel=0.5 /*aqui ira el  valor de un input*/ });//asigna un valor constante los espacios del texto
 		~poema[i].post;
 		{
 		//texto de salida
 		~g.refresh;
 		~w.refresh
 		}.defer(0.05);
-		t=tiempo.next;
 		//minimizamos la tesitura
-		if(a[i].value<36,{n=a[i].value+12});//normaliza los valores mas bajos de 28.midicps
+		if(a[i].value<36,{n=a[i].value+12});//normaliza los valores mas bajos de 36.midicps
 		if(a[i].value>84,{n=a[i].value-48});//normaliza los valores mayores de 84.midicps
+		if(a[i].value==32,{t=1;n=0},{t=tiempo.next});//asigna silencio y un valor de tiempo constante a los espacios del texto
 		release=t/vel;//esto hace lo mismo que lo comentado anteriormente
-		//release.postln;
-		//t.postcln;
 		Synth(\synth1,[\gate,1,\nota,n,\chord,ac.next,\rel,release,\amp,acento.next]);
 		cont=i%~poema.size;
 		i=i+1;
