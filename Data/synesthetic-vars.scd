@@ -21,7 +21,9 @@ pero con el poder del fuego en el consejo de su boca que te pide entres en la se
 aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscuridad solo existe para
 alumbrarse...";
 //indice del poema
-~letra=~poema[~i];
+~letra;
+//
+~a = ~poema.clumps([1,1]).ascii.flatten(1);//array con valor ascii
 /*
 //Based in a poem remixed by Karla Guillen
 //Serpentario: key words
