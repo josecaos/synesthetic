@@ -25,18 +25,18 @@ Tdef(\palabras,{|i|
 		~w.drawFunc = {~poema.drawLeftJustIn(Rect(60,-100,690,350),Font("Sans", 12),Color.black(0.5, 0.75))};
 		}.defer(0.05);
 		//normalizamos la tesitura a 2 octavas base
-		if(~a[i].value<33,{acc=acento.next;n=~a[i].value+12});//33 =!; 49 = 0; 65 = A;
+		if(~a[i].value<33,{acc=acento.next;n=~a[i].value+12});//33 = '!' signos; 48 = 0 numeros; 65 = A letras;
 		if(~a[i].value>=97,{acc=acento.next;n=~a[i].value-32});//97 = a;
-		if(~a[i].value==32,{acc=0;t=1;n=nil},{acc=acento.next;t=tiempo.next});//asigna silencio y un valor de tiempo constante a los espacios del texto
+		if(~a[i].value==32,{acc=0;t=1;n=nil},{acc=acento.next;t=tiempo.next});//silencio y tiempo constante a los espacios del texto
 		release=t/vel;//release del sinte mismo tiempo que lo que dura el tiempo
 		Synth(\synth1,[\gate,1,\nota,n,\chord,chord.next,\rel,release,\amp,acc]);
 		cont=i%~poema.size;
-		[~a[i], n].asString.postcln;
+		[~poema[i].ascii,~a[i], n].asString.postcln;
 		i=i+1;
 		t.wait;
 	});
 }).quant_(1);
 );
-s.scope(2,0);
+33+12
 // Help.gui;
 // " ".ascii.postcln //numero ascii del espacio
