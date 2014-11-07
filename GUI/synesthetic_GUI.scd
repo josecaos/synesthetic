@@ -16,7 +16,7 @@
 ~bt=Button(~w,Rect(760,10,120,30));
 ~bt.states_([["Input Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
 	            ["Close Input Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
-~bt.action={|val| if(val.value==1,{~t.front},{~t.close})};
+~bt.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;~t.front},{~t.close})};
 //boton salida texto
 ~bo=Button(~w,Rect(760,50,120,30));
 ~bo.states_([["Output Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],

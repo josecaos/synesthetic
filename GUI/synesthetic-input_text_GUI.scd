@@ -9,7 +9,8 @@
 ~it.background_(Color.green(1,0.2));
 ~it.string=~poema;
 ~it.action={|field|
-	~poema=field.value};
-  ~a = ~poema.clumps([1,1]).ascii.flatten(1);
   (~local +/+ "Data/synesthetic-seq.scd").load;
+	~poema=field.value;
+  ~a = ~poema.clumps([1,1]).ascii.flatten(1);
+	}
 )
