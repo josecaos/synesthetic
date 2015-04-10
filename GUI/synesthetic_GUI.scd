@@ -23,7 +23,7 @@
 	            ["Close Output Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bo.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-output_text_GUI.scd").load;~o.front},{~o.close})};
 ~w.drawFunc = {~poema.drawLeftJustIn(Rect(60,-100,690,350),Font("Sans", 12),Color.black(0.5, 0.75));
-	~poema[~i].asString.drawInRect(Rect(60,-100,690,350),Font("Sans", 12),Color.red(0.5, 0.75));
+	//~poema[~i].asString.drawInRect(Rect(60,-100,690,350),Font("Sans", 12),Color.red(0.5, 0.75));
 	};//escribe el poema;
 // cerrar ventana
 ~w.onClose={Tdef(\palabras).stop;s.quit};

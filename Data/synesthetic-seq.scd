@@ -31,7 +31,7 @@ Tdef(\palabras,{|i|
 		release=t/vel;//release del sinte mismo tiempo que lo que dura el tiempo
 		Synth(\synth1,[\gate,1,\nota,n,\chord,chord.next,\rel,release,\amp,acc]);
 		cont=i%~poema.size;
-		[~poema[i].ascii,~a[i], n].asString.postcln;
+		//[~poema[i].ascii,~a[i], n].asString.postcln;//debug values
 		i=i+1;
 		t.wait;
 	});

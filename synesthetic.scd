@@ -4,11 +4,19 @@
 ////////////////////////////////////
 (
 s.waitForBoot{
-	 ~local="/home/josecao5/Documents/Repos/synesthetic/";/* <--- Change for your local URL to synesthetic folder location*/
-	////////////////////////////////////////////////////////
+	 ~local="/home/josecaos/Documents/Repos/synesthetic/";/* <--- Change for your local URL to synesthetic folder location*/
+	///////////////////load assets/////////////////////////////////////
 	(~local +/+ "Data/synesthetic-load.scd").load};
     //s.scope(2,0);
 );
 //if the GUI is closed, the server quits
 //end of file
 // Help.gui
+s.boot;
+{CaosGuitChords.ar('',gate:1)}.play;
+//
+y = [ \the, \symbol, \collection, \contains, \my, \symbol ];
+y.indexOf(\symbol);
+y = [ \the, \symbol, \collection, \contains, \my, \symbol ];
+y.includes(\symbol);
+y.includes(\solipsism);
