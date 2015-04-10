@@ -1,7 +1,7 @@
 synesthetic
 ===========
 
-Synthesizer for Poems, at least letters.
+Synthesizer for Poems, at least Phrases or letters.
 Uses caosPercLib
 
 Not yet finished
