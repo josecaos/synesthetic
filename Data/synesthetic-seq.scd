@@ -37,6 +37,5 @@ Tdef(\palabras,{|i|
 	});
 }).quant_(1);
 );
-33+12
 // Help.gui;
 // " ".ascii.postcln //numero ascii del espacio

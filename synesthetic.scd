@@ -15,8 +15,3 @@ s.waitForBoot{
 s.boot;
 {CaosGuitChords.ar('',gate:1)}.play;
 //
-y = [ \the, \symbol, \collection, \contains, \my, \symbol ];
-y.indexOf(\symbol);
-y = [ \the, \symbol, \collection, \contains, \my, \symbol ];
-y.includes(\symbol);
-y.includes(\solipsism);

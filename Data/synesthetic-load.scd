@@ -7,7 +7,7 @@
 ///////////////////////////////
 //
 //
-//Here some init stuff
+11.do{"Synesthetic; Letters to sound, words to phrases, poems to music".postln};
 //
 //
 //
