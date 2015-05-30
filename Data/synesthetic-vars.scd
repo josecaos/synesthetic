@@ -6,7 +6,7 @@
 //
 ////////////////////////
 //iteracion global
-~i=0;
+~i=nil;
 //barra de inicio
 ~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n".postln;
 //Poema por default, esta variable cambia de acuerdo al texto introducido en el GUI

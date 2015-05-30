@@ -7,7 +7,7 @@
 ///////////////////////////////
 //
 //
-11.do{"Synesthetic; Letters to sound, words to phrases, poems to music".postln};
+11.do{"Letters to sound, words to phrases, poems to music".postln};
 //
 //
 //

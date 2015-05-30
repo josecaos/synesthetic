@@ -11,7 +11,3 @@ s.waitForBoot{
 );
 //if the GUI is closed, the server quits
 //end of file
-// Help.gui
-s.boot;
-{CaosGuitChords.ar('',gate:1)}.play;
-//
