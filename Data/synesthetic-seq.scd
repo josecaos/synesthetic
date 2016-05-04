@@ -12,7 +12,7 @@ Tdef(\palabras,{|i|
 	i=0;
 	chord=Pxrand(['M','m','M7','m7','Mmaj7','mmaj7','M9','M9m','m9','m9m'],inf).asStream;
 	acento=Pseq([1,0.6,0.8,0.5],inf).asStream;
-	tiempo=Pwrand([0.25,0.5]/vel,[0.66,0.33],inf).asStream;
+	tiempo=Pwrand([0.125,0.25]/vel,[0.66,0.33],inf).asStream;
     ~inicio.post;
 	inf.do({
 		~i=i;

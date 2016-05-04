@@ -6,7 +6,12 @@
 (
 ~g=Window("Synesthetic Synth Graphs,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,300,280),true,false);
 ~g.view.background_(Color.fromHexString("#A3A3A3"));
+
+
+// Help.gui;
+
 ~g.drawFunc = {
+	for ( 0, 36, {
     Pen.strokeColor = Color.rand;
 	  Pen.width = rrand(3,45);
     Pen.translate(rrand(10,300),rrand(10,300));
@@ -22,7 +27,7 @@
 	  Pen.moveTo(rrand(-10,400)@rrand(-10,400));
     Pen.lineTo(rrand(-10,400)@rrand(-10,-300));
     Pen.strokeColor = Color.rand;
-  	Pen.width = rrand(1,15);
+  	Pen.width = rrand(1,15)*3;
 	//Pen.scale(rrand(0.1,1),  rrand(1,4));
 	  Pen.lineTo(rrand(-10,300)@rrand(-10,400));
    	Pen.moveTo(rrand(10,-400)@rrand(-10,400));
@@ -35,8 +40,9 @@
     Pen.lineTo(rrand(-10,-400)@rrand(-10,-400));
   	Pen.width = rrand(1,15);
     Pen.lineTo(rrand(10,-400)@rrand(-10,-300));
-  	Pen.width = rrand(1,15);
+  	Pen.width = rrand(1,15)*2;
     Pen.lineTo(rrand(-10,-400)@rrand(-10,-400));
-    Pen.stroke
+		Pen.stroke;
+	});
 };
 )

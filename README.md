@@ -1,8 +1,9 @@
 synesthetic
 ===========
 
-Synthesizer for Poems, at least Phrases or letters.
-Uses caosPercLib
+Synthesizer for Poems, Phrases or Letters.
 
-Not yet finished
+Uses caosPercLib:
+https://github.com/josecaos/caosperclib/archive/master.zip
+
 Work in progress...
