@@ -20,9 +20,9 @@ Tdef(\palabras,{|i|
 		~poema[i].post;//escribe lo que suena al post
 		{
 		//texto de salida
-		~g.refresh;
-		~w.refresh;
-		~w.drawFunc = {~poema.drawLeftJustIn(Rect(60,-100,690,350),Font("Sans", 12),Color.black(0.5, 0.75))};
+			// ~g.refresh;
+			// ~w.refresh;
+			// ~w.drawFunc = {~poema.drawLeftJustIn(Rect(60,-100,690,350),Font("Sans", 12),Color.black(0.5, 0.75))};
 		}.defer(0.05);
 		//normalizamos la tesitura a 2 octavas base
 		if(~a[i].value<33,{acc=acento.next;n=~a[i].value+12});//33 = '!' signos; 48 = 0 numeros; 65 = A letras;
