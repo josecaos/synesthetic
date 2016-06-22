@@ -10,12 +10,12 @@
 //boton entrada texto
 ~bt=Button(~w,Rect(60,10,100,100));
 ~bt.states_([["Input Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
-	            ["Close Input Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+	            ["Close Input txt",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bt.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;~t.front},{~t.close})};
 //boton salida texto
 ~bo=Button(~w,Rect(60,128,100,100));
 ~bo.states_([["Output Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
-	            ["Close Output Text",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+	            ["Close Output txt",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bo.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-output_text_GUI.scd").load;~o.front},{~o.close})};
 //boton graficos
 ~bg=Button(~w,Rect(60,248,100,100));
