@@ -1,11 +1,10 @@
 //written by @joseCao5 //
-//13jul14
 //song notes determined by a poem
 ////////////////////////////////////
 (
 s.waitForBoot{
 
-///////////////////`load assets/////////////////////
+///////////////////load assets/////////////////////
 	 ~local = thisProcess.nowExecutingPath.dirname;
 	(~local +/+ "Data/synesthetic-load.scd").load};
 

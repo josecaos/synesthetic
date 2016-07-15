@@ -9,6 +9,12 @@
 ~i=nil;
 //barra de inicio
 ~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n".postln;
+//opciones de sintetizador
+~sinte1 = nil;
+~sinte2 = nil;
+~sintes = [~sinte1, ~sinte2];
+~sinte = 1;
+//
 //Poema por default, esta variable cambia de acuerdo al texto introducido en el GUI
 ~poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
 sin verguenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detras de la puerta,
