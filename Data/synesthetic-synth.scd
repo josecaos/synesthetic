@@ -25,3 +25,4 @@ SynthDef(\synth2,{|nota=60,att=0.01,rel=0.25,acorde,pan=0,gate=1,amp=0.5,out=0|
 	Out.ar(out,Pan2.ar(signal*envelope,[0.09,-1]));
 	}).add;
 );
+// 

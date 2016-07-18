@@ -18,6 +18,7 @@ Tdef(\palabras,{|i|
 	//declara los sintetizadores en las variables previamente usadas
 	~sinte1 = Synth(\synth1,[\gate,1,\nota,n,\chord,chord.next,\rel,release,\amp,acc]);
 	~sinte2 = Synth(\synth2,[\gate,1,\nota,n,\rel,release,\amp,acc]);
+	~sintes = [~sinte1, ~sinte2];
 	~sintes.postln;//debug
 	inf.do({
 		~i=i;
@@ -34,9 +35,9 @@ Tdef(\palabras,{|i|
 		if(~a[i].value>=97,{acc=acento.next;n=~a[i].value-32});//97 = a;
 		if(~a[i].value==32,{acc=0;t=1;n=nil},{acc=acento.next;t=tiempo.next});//silencio y tiempo constante a los espacios del texto
 		release=t/vel;//release del sinte mismo que el tiempo
-		~sintes[~sinte];
+		~sintes[~sinte].postcln;
 		cont=i%~poema.size;
-		//[~poema[i].ascii,~a[i], n].asString.postcln;//debug values
+		//[~poema[i].ascii,~a[i], n].asString.postcln;//debug
 		i=i+1;
 		t.wait;
 	});
