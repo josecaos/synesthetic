@@ -16,13 +16,13 @@
 //boton salida texto
 ~bo=Button(~w,Rect(60,128,100,100));
 ~bo.states_([["Output Text",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
-	            ["Close Output txt",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+	            ["Close Output",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
 ~bo.action={|val| if(val.value==1,{(~local +/+ "GUI/synesthetic-output_text_GUI.scd").load;~o.front},{~o.close})};
 //boton seleccion sintetizador
 ~boton_sintes=Button(~w,Rect(170,10,100,100));
-~boton_sintes.states_([["Use Single Note",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
-	            ["Use Chords",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
-~boton_sintes.action={|val| if(val.value==1,{~sinte = 1;~sintes.postcln;~sinte.postcln},{~sinte = 0;~sintes.postcln;~sinte.postcln})};
+~boton_sintes.states_([["Use Chords",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
+	            ["Use Single Note",Color.fromHexString("#A0A0A0"),Color.fromHexString("#F8F8F8")]]);
+~boton_sintes.action={|val| if(val.value==1,{~sinte = 0},{~sinte = 1})};
 
 //boton graficos
 ~bg=Button(~w,Rect(60,248,100,100));

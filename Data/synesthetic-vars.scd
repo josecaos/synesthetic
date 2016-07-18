@@ -8,11 +8,8 @@
 //iteracion global
 ~i=nil;
 //barra de inicio
-~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n".postln;
+~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n";
 //opciones de sintetizador
-~sinte1 = nil;
-~sinte2 = nil;
-~sintes = [~sinte1, ~sinte2];
 ~sinte = 1;
 //
 //Poema por default, esta variable cambia de acuerdo al texto introducido en el GUI

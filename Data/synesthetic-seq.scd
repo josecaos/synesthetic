@@ -15,14 +15,10 @@ Tdef(\palabras,{|i|
 	tiempo=Pwrand([0.125,0.25]/vel,[0.66,0.33],inf).asStream;
     ~inicio.post;
 	acc=0.5;
-	//declara los sintetizadores en las variables previamente usadas
-	~sinte1 = Synth(\synth1,[\gate,1,\nota,n,\chord,chord.next,\rel,release,\amp,acc]);
-	~sinte2 = Synth(\synth2,[\gate,1,\nota,n,\rel,release,\amp,acc]);
-	~sintes = [~sinte1, ~sinte2];
-	~sintes.postln;//debug
 	inf.do({
 		~i=i;
-		if(~i<~a.size,{if(~poema.size<=~i,{~inicio.postln;i=0},{nil})},{~inicio.postln;i=0});//regula el reinicio segun el iterante o segun el tamano del poema
+		//regula el reinicio segun el iterante o segun el tamano del poema
+		if(~i<~a.size,{if(~poema.size<=~i,{~inicio.postln;i=0},{nil})},{~inicio.postln;i=0});
 		~poema[i].post;//escribe lo que suena al post
 		{
 		//texto de salida
@@ -35,7 +31,9 @@ Tdef(\palabras,{|i|
 		if(~a[i].value>=97,{acc=acento.next;n=~a[i].value-32});//97 = a;
 		if(~a[i].value==32,{acc=0;t=1;n=nil},{acc=acento.next;t=tiempo.next});//silencio y tiempo constante a los espacios del texto
 		release=t/vel;//release del sinte mismo que el tiempo
-		~sintes[~sinte].postcln;
+		//suena sintetizador seleccionado
+		if(~sinte == 0, {Synth(\synth1,[\gate,1,\nota,n,\chord,chord.next,\rel,release,\amp,acc]);},
+			{~sinte2 = Synth(\synth2,[\gate,1,\nota,n,\rel,release,\amp,acc]);});
 		cont=i%~poema.size;
 		//[~poema[i].ascii,~a[i], n].asString.postcln;//debug
 		i=i+1;
