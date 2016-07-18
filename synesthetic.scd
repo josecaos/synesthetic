@@ -11,6 +11,8 @@ s.waitForBoot{
 );
 //if the GUI is closed, the server quits
 
-//caosperlib needed to full use, install here:
+//caosperlib needed to full use, download here:
+//https://github.com/josecaos/caosperclib
+//install here:
 Platform.userExtensionDir
 //end of file
