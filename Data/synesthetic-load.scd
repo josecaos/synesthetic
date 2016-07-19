@@ -10,6 +10,7 @@
 11.do{"Letters to sound, poems to music".postln};
 //
 //
+TempoClock.tempo = 60/60;
 //
 //files to load
 //
