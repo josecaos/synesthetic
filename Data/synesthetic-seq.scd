@@ -11,9 +11,9 @@ Tdef(\palabras,{|i|
 	var chord,acc,acento,cont,n,release,vel=0.5;
 	i=0;
 	chord=Pxrand(['M','m','M7','m7','Mmaj7','mmaj7','M9','M9m','m9','m9m'],inf).asStream;
-	acento=Pseq([1,0.6,0.8,0.5],inf).asStream;
+	acento=Pseq([0.6,0.3,0.4,0.2],inf).asStream;
     ~inicio.post;
-	acc=0.5;
+	acc=0.35;
 	inf.do({
 		~i=i;
 		//regula el reinicio segun el iterante o segun el tamano del poema

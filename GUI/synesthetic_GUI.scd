@@ -2,7 +2,7 @@
 //synesthetic synth, GUI
 //
 (
-~w=Window("Make a song with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,245,180),true).front;
+~w=Window("PLay a songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,245,180),true).front;
 // play/stop
 ~b=Button(~w,Rect(10,10,40,338));
 ~b.states_([["PLAY",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
@@ -29,7 +29,7 @@
 StaticText(~w, Rect(220,60,100,40)).string_("BPM").align_(\center).background_(Color(0,0.9,0));
 ~bpm = NumberBox(~w, Rect(170,60,50,40));
 ~bpm.action = {|numb| TempoClock.tempo = numb.value/60};
-~bpm.valueAction_(60).clipLo_(1).clipHi_(192).align_(\center);
+~bpm.valueAction_(60).clipLo_(20).clipHi_(260).align_(\center);
 //boton graficos
 ~bg=Button(~w,Rect(60,248,100,100));
 ~bg.states_([["Graphs On",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],

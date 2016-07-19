@@ -10,7 +10,7 @@
 (
 SynthDef(\single,{|nota=60,att=0.01,rel=0.25,pan=0,gate=1,amp=0.5,out=0|
 	var signal,envelope;
-	signal = SinOsc.ar(nota.midicps,0,amp)+LFTri.ar(nota.midicps+12,0,amp-0.15).lag(0.012);
+	signal = SinOsc.ar(nota.midicps,-0.35,amp)+LFTri.ar(nota.midicps+12,0.35,amp-0.2);
 	envelope = EnvGen.ar(Env.perc(att,rel),gate,doneAction:2);
 	Out.ar(out,Pan2.ar(signal*envelope,[0.09,-1]));
 	}).add;
