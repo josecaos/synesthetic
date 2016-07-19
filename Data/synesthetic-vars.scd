@@ -10,7 +10,7 @@
 //barra de inicio
 ~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n";
 //opciones de sintetizador
-~sinte = 1;
+~sinte = 0;
 //
 //Poema por default, esta variable cambia de acuerdo al texto introducido en el GUI
 ~poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
