@@ -23,10 +23,11 @@ Tdef(\palabras,{|i|
 		//graficos
 			~g.refresh;
 		}.defer(0.05);
-		//normalizamos la tesitura a 2 octavas base
-		if(~a[i].value<33,{acc=acento.next;n=~a[i].value+12});//33 = '!' signos; 48 = 0 numeros; 65 = A letras;
-		if(~a[i].value>=97,{acc=acento.next;n=~a[i].value-32});//97 = a;
-		if(~a[i].value==32,{acc=0;n=nil},{acc=acento.next});//silencio y tiempo constante a los espacios del texto
+		//normalizamos la tesitura a escala musical
+		if(~a[i].value == 32,{acc=0;n=nil},{acc=acento.next});//silencio y tiempo constante a los espacios del texto
+		if((~a[i].value >= 33) || (~a[i].value <= 64),{acc=acento.next;n=~a[i].value+57});//notas altas F#6 -> C#9 //33 = '!' signos; 48 = 0 numeros;
+		if((~a[i].value >= 65) || (~a[i].value <= 96), {acc=acento.next;~a[i].value-37});//notas graves E1 -> B3 //65 = A mayúsculas;
+		if((~a[i].value >= 97) || (~a[i].value <= 126),{acc=acento.next;n=~a[i].value-37});//notas medias C4 -> F6 //97 = a minusculas;
 		release=1/vel;//release del sinte mismo que el tiempo
 		//suena sintetizador seleccionado
 		switch(~sinte,
