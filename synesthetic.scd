@@ -1,6 +1,6 @@
 //written by @joseCao5 //
-//song notes determined by a poem
-////////////////////////////////////
+//song notes determined by letters
+/////////////To start execute next function/////////////////
 (
 s.waitForBoot{
 

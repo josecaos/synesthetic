@@ -2,7 +2,7 @@
 //synesthetic synth, GUI
 //
 (
-~w=Window("PLay a songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,245,180),true).front;
+~w=Window("Play a songs with letters,written by @joseCao5",Rect.aboutPoint(Window.screenBounds.center,245,180),true).front;
 // play/stop
 ~b=Button(~w,Rect(10,10,40,338));
 ~b.states_([["PLAY",Color.fromHexString("#D9D1D9"),Color.fromHexString("#A0A0A0")],
@@ -22,9 +22,13 @@
 ~sintes = PopUpMenu(~w,Rect(170,10,150,40));
 ~sintes.items = ["Use Single Note","Use Chords"];
 ~sintes.action={|menu|
-	var v = menu.value;
+	var v;
+	//checa si existe la clase de caosperclib
+	if('CaosGuitChords'.asClass != nil, {v = menu.value},
+		{v = 0;"In order to user Chords you must install 'caosperclib' \n Download here: \n https://github.com/josecaos/caosperclib \n install here: ".postln + {Platform.userExtensionDir}.value.postln});
 	switch(v,0,{~sinte = v},
-		1,{~sinte = v})};
+		1,{~sinte = v};
+)};
 // cambio de tiempo
 StaticText(~w, Rect(220,60,100,40)).string_("BPM").align_(\center).background_(Color(0,0.9,0));
 ~bpm = NumberBox(~w, Rect(170,60,50,40));
