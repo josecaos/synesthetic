@@ -25,7 +25,8 @@
 	var v;
 	//checa si existe la clase de caosperclib
 	if('CaosGuitChords'.asClass != nil, {v = menu.value},
-		{v = 0;"In order to user Chords you must install 'caosperclib' \n Download here: \n https://github.com/josecaos/caosperclib \n install here: ".postln + {Platform.userExtensionDir}.value.postln});
+		{v = 0;
+			"\n /////////////WARNING:///////////////////".postln + " In order to use Chords you must install 'caosperclib' \n Download it here: \n https://github.com/josecaos/caosperclib \n install it here: ".postln + {Platform.userExtensionDir}.value.postln + " ////////////CONTINUE:////////////////// \n".postln});
 	switch(v,0,{~sinte = v},
 		1,{~sinte = v};
 )};
