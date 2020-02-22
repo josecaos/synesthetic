@@ -6,14 +6,14 @@
 //
 ////////////////////////
 //iteracion global
-~i=nil;
+~syn_i=nil;
 //barra de inicio
-~inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n";
+~syn_inicio="\n /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/Starting:\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/ \n";
 //opciones de sintetizador
-~sinte = 0;
-//
+~syn_sinte = 0;
+~syn_salida = 0;
 //Poema por default, esta variable cambia de acuerdo al texto introducido en el GUI
-~poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
+~syn_poema="Existe una puerta secreta en los brazos de la soledad que te conduce al interior de un abismo donde juegas
 sin verguenza a domar la serpiente que habita en ti, cuando nadie te ve, cuelgas las mentiras detras de la puerta,
 te quedas ligero como una personalidad de aire y develas al cosmos los secretos de un existir invisible que llevas
 en tus silencios, la serpiente danza con su traje de alas rotas y en cada movimiento el perfume de ancestrales
@@ -24,7 +24,7 @@ pero con el poder del fuego en el consejo de su boca que te pide entres en la se
 aprendas el arte de arrastrarse con poesia en la oscuridad... al fin la oscuridad solo existe para
 alumbrarse...";
 //indice del poema
-~a = ~poema.clumps([1,1]).ascii.flatten(1);//array con valor ascii
+~syn_a = ~syn_poema.clumps([1,1]).ascii.flatten(1);//array con valor ascii
 /*
 //Based in a poem remixed by Karla Guillen
 //Serpentario: key words

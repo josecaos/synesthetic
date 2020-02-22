@@ -14,11 +14,11 @@ TempoClock.tempo = 60/60;
 //
 //files to load
 //
-(~local +/+ "Data/synesthetic-vars.scd").load;
-(~local +/+ "Data/synesthetic-synth.scd").load;
-(~local +/+ "Data/synesthetic-seq.scd").load;
-(~local +/+ "GUI/synesthetic-graph_GUI.scd").load;
-(~local +/+ "GUI/synesthetic-input_text_GUI.scd").load;
-(~local +/+ "GUI/synesthetic-output_text_GUI.scd").load;
-(~local +/+ "GUI/synesthetic_GUI.scd").load;
+(~syn_local +/+ "Data/synesthetic-vars.scd").load;
+(~syn_local +/+ "Data/synesthetic-synth.scd").load;
+(~syn_local +/+ "Data/synesthetic-seq.scd").load;
+(~syn_local +/+ "GUI/synesthetic-graph_GUI.scd").load;
+(~syn_local +/+ "GUI/synesthetic-input_text_GUI.scd").load;
+(~syn_local +/+ "GUI/synesthetic-output_text_GUI.scd").load;
+(~syn_local +/+ "GUI/synesthetic_GUI.scd").load;
 //
