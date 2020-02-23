@@ -33,7 +33,7 @@
 		1,{~syn_sinte = v};
 )};
 // cambio de tiempo
-StaticText(~syn_w, Rect(390,10,100,20)).string_("BPM").background_(Color(0,0.9,0));
+StaticText(~syn_w, Rect(390,10,100,20)).string_("BPM").align_(\center)background_(Color(0,0.9,0));
 ~syn_bpm = NumberBox(~syn_w, Rect(390,30,100,80));
 ~syn_bpm.action = {|numb| TempoClock.tempo = numb.value/60};
 ~syn_bpm.valueAction_(60).clipLo_(0).clipHi_(320).align_(\center);
